@@ -5,10 +5,10 @@ INSERT INTO Productos (codigo, tipo, peso, fechaVencimiento, precio)
 VALUES ('PRD001', 'Pollo entero', 2000, TO_DATE('2025-05-10', 'YYYY-MM-DD'), 15000);
 -- Violación de CHECK: REGEXP_LIKE(codigo, '^PRO[0-9]+$')
 
--- ERROR: tipoM no es válido (solo 'Higado', 'Corazon', 'Mollejas')
-INSERT INTO Menudencias (tipoM, contenidoSangre, codigo) 
+-- ERROR: parteMenudencia no es válido (solo 'Higado', 'Corazon', 'Mollejas')
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) 
 VALUES ('Riñón', 'Medio', 'PRO002');
--- Violación de CHECK: tipoM IN ('Higado', 'Corazon', 'Mollejas')
+-- Violación de CHECK: parteMenudencia IN ('Higado', 'Corazon', 'Mollejas')
 
 -- ERROR: clienteID no sigue el formato 'CLI###'
 INSERT INTO Clientes (clienteID, nombre, ubicacion, nit) 
@@ -31,8 +31,8 @@ VALUES (2104567890, 'CLI002');
 -- Violación de CHECK: REGEXP_LIKE(numeroTelefonico, '^3[0-9]{9}$')
 
 -- ERROR: estado no permitido (debe ser 'Aprobada' o 'Cancelada')
-INSERT INTO Facturas (facturaID, fechaEmision, estado, valorUnitario, nit, codigoPedido, codigoDeuda, codigoPago) 
-VALUES ('FAC005', TO_DATE('2025-03-15', 'YYYY-MM-DD'), 'Pendiente', 120.50, '98765432-1', 'PED001', 'DEU001', 'PAG001');
+INSERT INTO Facturas (facturaID, fechaEmision, estado, valorUnitario, codigoPedido, codigoDeuda, codigoPago) 
+VALUES ('FAC005', TO_DATE('2025-03-15', 'YYYY-MM-DD'), 'Pendiente', 120.50, 'PED001', 'DEU001', 'PAG001');
 -- Violación de CHECK: estado IN ('Aprobada', 'Cancelada')
 
 -- ERROR: serial en formato incorrecto (debe ser dos letras seguidas de números)
@@ -40,10 +40,10 @@ INSERT INTO Fisicas (serial, codigoFactura)
 VALUES ('123ABC', 'FAC002');
 -- Violación de CHECK: REGEXP_LIKE(serial, '^[A-Z]{2}[0-9]+$')
 
--- ERROR: firma incorrecta (debe ser 'Pollos El Cantor')
-INSERT INTO Electronicas (codigoDian, firma, hora, codigoFactura) 
-VALUES ('A1B2C3D4E5F6', 'Empresa X', '14:30', 'FAC003');
--- Violación de CHECK: firma = 'Pollos El Cantor'
+-- ERROR: codigoFactura incorrecta
+INSERT INTO Electronicas (codigoDian, hora, codigoFactura) 
+VALUES ('A1B2C3D4E5F6', '14:30', 'FACS003');
+-- Violación de CHECK: codigoFactura = 'FAC'
 
 -- ERROR: abono en formato incorrecto
 INSERT INTO Deudas (deudaID, plazo, fechaVencimiento, abono) 
@@ -57,12 +57,12 @@ VALUES ('PAG005', 10.5, 'Confirmado', TO_DATE('2025-04-01', 'YYYY-MM-DD'), '11:4
 
 -- ERROR: cantidad enviada no sigue el formato 'X kg' o 'X g'
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES002', TRUE, TRUE, 'Carlos Ruiz', TO_DATE('2025-05-20', 'YYYY-MM-DD'), '500 litros', 'FAC001', 'ENV001');
+VALUES ('DES002', T, T, 'Carlos Ruiz', TO_DATE('2025-05-20', 'YYYY-MM-DD'), '500 litros', 'FAC001', 'ENV001');
 -- Violación de CHECK: REGEXP_LIKE(cantidadEnviada, '^[A-Za-z ]+ [0-9]+(g|kg)$')
 
 -- ERROR: placaVehiculo no sigue el formato 'XXX###'
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV003', 'AB1234', 'Pedro Gómez', TO_DATE('2025-05-15', 'YYYY-MM-DD'), '08:45', 'Tienda Local', NULL, 'Centro Comercial', 100.00, FALSE);
+VALUES ('ENV003', 'AB1234', 'Pedro Gómez', TO_DATE('2025-05-15', 'YYYY-MM-DD'), '08:45', 'Tienda Local', NULL, 'Centro Comercial', 100.00, F);
 -- Violación de CHECK: placaVehiculo LIKE '[A-Z][A-Z][A-Z][0-9][0-9][0-9]'
 
 -- ERROR: puntoPartida y puntoLlegada son iguales
