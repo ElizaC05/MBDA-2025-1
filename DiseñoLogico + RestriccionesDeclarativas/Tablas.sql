@@ -1,4 +1,4 @@
-/*TABLAS*/
+    /*TABLAS*/
 
 CREATE TABLE Pedidos(
     pedidoID VARCHAR2(10) NOT NULL,
@@ -71,7 +71,6 @@ CREATE TABLE Facturas(
     fechaEmision DATE NOT NULL,
     estado VARCHAR2(10) NOT NULL,
     valorUnitario NUMBER (4,2) NOT NULL,
-    nit VARCHAR2(10),
     codigoPedido VARCHAR2(10) NOT NULL,
     codigoDeuda VARCHAR2(10) NOT NULL,
     codigoPago VARCHAR2(10) NOT NULL
