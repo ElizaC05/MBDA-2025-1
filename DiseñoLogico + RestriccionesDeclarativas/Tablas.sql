@@ -25,13 +25,13 @@ CREATE TABLE Productos(
 );
 
 CREATE TABLE PollosEnteros(
-    TamañoPollo VARCHAR2(10) NOT NULL,
+    tamañoPollo VARCHAR2(10) NOT NULL,
     estado VARCHAR2(15) NOT NULL,
     codigo VARCHAR2(10) NOT NULL
 );
 
 CREATE TABLE PollosDespresados(
-    TamañoDespresado VARCHAR2(10) NOT NULL,
+    tamañoDespresado VARCHAR2(10) NOT NULL,
     numeroPiezas NUMBER(3) NOT NULL,
     codigo VARCHAR2(10) NOT NULL
 );
