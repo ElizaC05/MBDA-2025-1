@@ -28,7 +28,7 @@ ALTER TABLE Productos ADD CONSTRAINT CK_PRODUCTOS_PEDIDOID
     CHECK (REGEXP_LIKE(codigoPedido, '^PED[0-9]+$'));
 
 ALTER TABLE PollosEnteros ADD CONSTRAINT CK_TPOLLO_ENTEROS
-    CHECK (tipoE IN ('Pequeño', 'Mediano', 'Grande'));
+    CHECK (tamañoPollo IN ('Pequeño', 'Mediano', 'Grande'));
 
 ALTER TABLE PollosEnteros ADD CONSTRAINT CK_ESTADOPOLLO_ENTEROS
     CHECK (estado IN ('Condimentado', 'Natural'));
@@ -37,7 +37,7 @@ ALTER TABLE PollosEnteros ADD CONSTRAINT CK_ENTEROS_CODIGOPRODUCTO
     CHECK (REGEXP_LIKE(codigo, '^PRO[0-9]+$'));    
 
 ALTER TABLE PollosDespresados ADD CONSTRAINT CK_TPOLLO_DESPRESADOS
-    CHECK (tipoD IN ('Pequeño', 'Mediano', 'Grande'));
+    CHECK (tamañoDespresado IN ('Pequeño', 'Mediano', 'Grande'));
 
 ALTER TABLE PollosDespresados ADD CONSTRAINT CK_PIEZAS_DESPRESADOS
     CHECK (numeroPiezas >= 0);
@@ -46,7 +46,7 @@ ALTER TABLE PollosDespresados ADD CONSTRAINT CK_DESPRESADOS_CODIGOPRODUCTO
     CHECK (REGEXP_LIKE(codigo, '^PRO[0-9]+$'));    
 
 ALTER TABLE Menudencias ADD CONSTRAINT CK_TPOLLOM_MENUDENCIAS
-    CHECK (tipoM IN ('Higado', 'Corazon', 'Mollejas'));
+    CHECK (parteMenudencia IN ('Higado', 'Corazon', 'Mollejas'));
 
 ALTER TABLE Menudencias ADD CONSTRAINT CK_CONTENIDOSANGRE_MENUDENCIAS
     CHECK (contenidoSangre IN ('Bajo', 'Medio', 'Alto'));
@@ -78,9 +78,6 @@ ALTER TABLE Telefonos ADD CONSTRAINT CK_TELEFONO_NUMERO
 ALTER TABLE Facturas ADD CONSTRAINT CK_FACTURA_ID
     CHECK (REGEXP_LIKE(facturaID, '^FAC[0-9]+$'));
 
-ALTER TABLE Facturas ADD CONSTRAINT CK_FACTURAS_NIT
-    CHECK (REGEXP_LIKE(nit, '^[0-9]+-$'));
-
 ALTER TABLE Facturas ADD CONSTRAINT CK_ESTADO_FACTURAS 
     CHECK (estado IN ('Aprobada', 'Cancelada'));
 
@@ -107,9 +104,6 @@ ALTER TABLE Electronicas ADD CONSTRAINT CK_ELECTRONICAS_CODIGOFACTURA
 
 ALTER TABLE Electronicas ADD CONSTRAINT CK_ELECTRONICAS_DIAN
     CHECK (REGEXP_LIKE(codigoDian, '^[A-Za-z0-9]+$') AND LENGTH(codigoDian) <= 64);
-
-ALTER TABLE Electronicas ADD CONSTRAINT CK_ELECTRONICAS_FIRMA
-    CHECK (firma = 'Pollos El Cantor');
 
 ALTER TABLE Electronicas ADD CONSTRAINT CK_ELECTRONICAS_HORA
     CHECK (REGEXP_LIKE(hora, '^([01][0-9]|2[0-3]):[0-5][0-9]$'));
@@ -147,6 +141,12 @@ ALTER TABLE Despachos ADD CONSTRAINT CK_DESPACHOS_CODIGOFACTURA
 ALTER TABLE Despachos ADD CONSTRAINT CK_DESPACHOS_GUIAENVIO
     CHECK (REGEXP_LIKE(guiaEnvio, '^ENV[0-9]+$'));
 
+ALTER TABLE Despachos ADD CONSTRAINT CK_DESPACHOS_DISPONIBILIDAD
+    CHECK (disponibilidadCarros IN ('T', 'F'));
+
+ALTER TABLE Despachos ADD CONSTRAINT CK_DESPACHOS_REVISION
+    CHECK (revisionProductos IN ('T', 'F'));
+
 ALTER TABLE Envios ADD CONSTRAINT CK_PLACA_ENVIOS
     CHECK (placaVehiculo LIKE '[A-Z][A-Z][A-Z][0-9][0-9][0-9]');
 
@@ -158,6 +158,9 @@ ALTER TABLE Envios ADD CONSTRAINT CK_ENVIOS_HORAENTREGA
 
 ALTER TABLE Envios ADD CONSTRAINT CK_ENVIOS_COSTO
     CHECK (REGEXP_LIKE(costo, '^[0-9]+(\.[0-9]+)?\$'));
+
+ALTER TABLE Envios ADD CONSTRAINT CK_ENVIOS_DEVOLUCION
+    CHECK (devolucion IN ('T', 'F'));
 
 ALTER TABLE Paradas ADD CONSTRAINT CK_PARADAS_ID
     CHECK (REGEXP_LIKE(rutaID, '^PAR[0-9]+$'));
