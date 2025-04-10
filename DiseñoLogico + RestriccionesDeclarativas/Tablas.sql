@@ -10,7 +10,7 @@ CREATE TABLE Pedidos(
 CREATE TABLE Contenidos(
     codigoProducto VARCHAR2(10) NOT NULL, 
     codigoPedido VARCHAR2(10) NOT NULL, 
-    cantidad NUMBER NOT NULL
+    cantidad NUMBER(3) NOT NULL
 );
 
 
@@ -25,19 +25,19 @@ CREATE TABLE Productos(
 );
 
 CREATE TABLE PollosEnteros(
-    tipoE VARCHAR2(10) NOT NULL,
+    TamañoPollo VARCHAR2(10) NOT NULL,
     estado VARCHAR2(15) NOT NULL,
     codigo VARCHAR2(10) NOT NULL
 );
 
 CREATE TABLE PollosDespresados(
-    tipoD VARCHAR2(10) NOT NULL,
-    numeroPiezas NUMBER NOT NULL,
+    TamañoDespresado VARCHAR2(10) NOT NULL,
+    numeroPiezas NUMBER(3) NOT NULL,
     codigo VARCHAR2(10) NOT NULL
 );
 
 CREATE TABLE Menudencias(
-    tipoM VARCHAR2(10) NOT NULL,
+    parteMenudencia VARCHAR2(10) NOT NULL,
     contenidoSangre VARCHAR2(5) NOT NULL,
     codigo VARCHAR2(10) NOT NULL
 );
@@ -84,14 +84,13 @@ CREATE TABLE Fisicas(
 
 CREATE TABLE Electronicas(
     codigoDian VARCHAR2(64) NOT NULL,
-    firma VARCHAR2(30) NOT NULL,
     hora VARCHAR2(10) NOT NULL,
     codigoFactura VARCHAR2(10) NOT NULL
 );
 
 CREATE TABLE Deudas(
     deudaID VARCHAR2(10) NOT NULL,
-    plazo NUMBER NOT NULL,
+    plazo NUMBER(3) NOT NULL,
     fechaVencimiento DATE NOT NULL,
     abono NUMBER (4,2) NOT NULL
 );
@@ -108,8 +107,8 @@ CREATE TABLE Pagos(
 
 CREATE TABLE Despachos(
     despachoID VARCHAR2(10) NOT NULL,
-    disponibilidadCarros BOOLEAN NOT NULL,
-    revisionProductos BOOLEAN NOT NULL,
+    disponibilidadCarros CHAR(1) NOT NULL,
+    revisionProductos CHAR(1) NOT NULL,
     encargado VARCHAR2(15) NOT NULL,
     fechaEstimada DATE NOT NULL,
     cantidadEnviada VARCHAR2(100) NOT NULL, 
@@ -127,7 +126,7 @@ CREATE TABLE Envios(
     observaciones VARCHAR2(50),
     ubicacion VARCHAR2(25) NOT NULL,
     costo NUMBER (4,2) NOT NULL,
-    devolucion BOOLEAN
+    devolucion CHAR(1)
 );
 
 CREATE TABLE Paradas(
