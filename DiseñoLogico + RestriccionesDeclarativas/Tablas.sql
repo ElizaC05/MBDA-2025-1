@@ -108,7 +108,7 @@ CREATE TABLE Despachos(
     despachoID VARCHAR2(10) NOT NULL,
     disponibilidadCarros CHAR(1) NOT NULL,
     revisionProductos CHAR(1) NOT NULL,
-    encargado VARCHAR2(15) NOT NULL,
+    encargado VARCHAR2(30) NOT NULL,
     fechaEstimada DATE NOT NULL,
     cantidadEnviada VARCHAR2(100) NOT NULL, 
     codigoFactura  VARCHAR2(10) NOT NULL,
@@ -118,7 +118,7 @@ CREATE TABLE Despachos(
 CREATE TABLE Envios(
     guiaID VARCHAR2(10) NOT NULL, 
     placaVehiculo VARCHAR2(6),
-    conductor VARCHAR2(15) NOT NULL,
+    conductor VARCHAR2(30) NOT NULL,
     fechaEntrega DATE NOT NULL,
     horaEntrega VARCHAR2(10) NOT NULL,
     destinatario VARCHAR2(15) NOT NULL, 
