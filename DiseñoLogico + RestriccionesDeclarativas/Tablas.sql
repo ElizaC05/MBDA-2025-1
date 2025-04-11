@@ -70,7 +70,7 @@ CREATE TABLE Facturas(
     facturaID VARCHAR2(10) NOT NULL,
     fechaEmision DATE NOT NULL,
     estado VARCHAR2(10) NOT NULL,
-    valorUnitario NUMBER (4,2) NOT NULL,
+    valorUnitario NUMBER (10,2) NOT NULL,
     codigoPedido VARCHAR2(10) NOT NULL,
     codigoDeuda VARCHAR2(10) NOT NULL,
     codigoPago VARCHAR2(10) NOT NULL
