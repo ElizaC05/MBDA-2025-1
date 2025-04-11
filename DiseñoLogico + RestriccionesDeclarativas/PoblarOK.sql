@@ -24,36 +24,37 @@ INSERT INTO Contenidos (codigoProducto, codigoPedido, cantidad) VALUES ('PRO008'
 INSERT INTO Contenidos (codigoProducto, codigoPedido, cantidad) VALUES ('PRO009', 'PED009', 20);
 INSERT INTO Contenidos (codigoProducto, codigoPedido, cantidad) VALUES ('PRO010', 'PED010', 11);
 
+
 -- Insertar en Productos
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO001', 'Pollo Entero', TO_DATE('2024-06-01', 'YYYY-MM-DD'), TO_DATE('2024-03-01', 'YYYY-MM-DD'), 5000.00, '1.5kg', 'PED001');
+VALUES ('PRO001', 'Pollo 1-1', TO_DATE('2024-06-01', 'YYYY-MM-DD'), TO_DATE('2024-03-01', 'YYYY-MM-DD'), 5000.00, '1.5kg', 'PED001');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO002', 'Menudencias', TO_DATE('2024-06-05', 'YYYY-MM-DD'), TO_DATE('2024-03-02', 'YYYY-MM-DD'), 2000.00, '500g', 'PED002');
+VALUES ('PRO002', 'Broaster', TO_DATE('2024-06-05', 'YYYY-MM-DD'), TO_DATE('2024-03-02', 'YYYY-MM-DD'), 2000.00, '500g', 'PED002');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO003', 'Pechuga', TO_DATE('2024-06-10', 'YYYY-MM-DD'), TO_DATE('2024-03-03', 'YYYY-MM-DD'), 7000.00, '1kg', 'PED003');
+VALUES ('PRO003', 'Muslo', TO_DATE('2024-06-10', 'YYYY-MM-DD'), TO_DATE('2024-03-03', 'YYYY-MM-DD'), 7000.00, '1kg', 'PED003');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO004', 'Muslo', TO_DATE('2024-06-15', 'YYYY-MM-DD'), TO_DATE('2024-03-04', 'YYYY-MM-DD'), 6000.00, '900g', 'PED004');
+VALUES ('PRO004', 'Pollo 1-4', TO_DATE('2024-06-15', 'YYYY-MM-DD'), TO_DATE('2024-03-04', 'YYYY-MM-DD'), 6000.00, '900g', 'PED004');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO005', 'Alas', TO_DATE('2024-06-20', 'YYYY-MM-DD'), TO_DATE('2024-03-05', 'YYYY-MM-DD'), 4500.00, '800g', 'PED005');
+VALUES ('PRO005', 'Colombina', TO_DATE('2024-06-20', 'YYYY-MM-DD'), TO_DATE('2024-03-05', 'YYYY-MM-DD'), 4500.00, '800g', 'PED005');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO006', 'Pollo Orgánico', TO_DATE('2024-06-25', 'YYYY-MM-DD'), TO_DATE('2024-03-06', 'YYYY-MM-DD'), 5500.00, '1.8kg', 'PED006');
+VALUES ('PRO006', 'Pechuga', TO_DATE('2024-06-25', 'YYYY-MM-DD'), TO_DATE('2024-03-06', 'YYYY-MM-DD'), 5500.00, '1.8kg', 'PED006');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO007', 'Molida de Pollo', TO_DATE('2024-06-30', 'YYYY-MM-DD'), TO_DATE('2024-03-07', 'YYYY-MM-DD'), 4800.00, '600g', 'PED007');
+VALUES ('PRO007', 'Pernil', TO_DATE('2024-06-30', 'YYYY-MM-DD'), TO_DATE('2024-03-07', 'YYYY-MM-DD'), 4800.00, '600g', 'PED007');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO008', 'Hígado de Pollo', TO_DATE('2024-07-05', 'YYYY-MM-DD'), TO_DATE('2024-03-08', 'YYYY-MM-DD'), 3200.00, '700g', 'PED008');
+VALUES ('PRO008', 'Ala', TO_DATE('2024-07-05', 'YYYY-MM-DD'), TO_DATE('2024-03-08', 'YYYY-MM-DD'), 3200.00, '700g', 'PED008');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO009', 'Chorizo de Pollo', TO_DATE('2024-07-10', 'YYYY-MM-DD'), TO_DATE('2024-03-09', 'YYYY-MM-DD'), 7500.00, '500g', 'PED009');
+VALUES ('PRO009', 'Pierna Pernil', TO_DATE('2024-07-10', 'YYYY-MM-DD'), TO_DATE('2024-03-09', 'YYYY-MM-DD'), 7500.00, '500g', 'PED009');
 
 INSERT INTO Productos (codigo, nombre, fechaCaducidad, fechaProduccion, valorPorKilo, peso, codigoPedido) 
-VALUES ('PRO010', 'Brochetas de Pollo', TO_DATE('2024-07-15', 'YYYY-MM-DD'), TO_DATE('2024-03-10', 'YYYY-MM-DD'), 8000.00, '400g', 'PED010');
+VALUES ('PRO010', 'Rabadilla', TO_DATE('2024-07-15', 'YYYY-MM-DD'), TO_DATE('2024-03-10', 'YYYY-MM-DD'), 8000.00, '400g', 'PED010');
 
 
 -- Insertar en PollosEnteros
@@ -72,30 +73,30 @@ INSERT INTO PollosEnteros (tamañoPollo, estado, codigo) VALUES ('Pequeño', 'Co
 
 -- Insertar en PollosDespresados 
 
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 4, 'PRO011');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Mediano', 6, 'PRO012');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Grande', 8, 'PRO013');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 5, 'PRO014');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Mediano', 7, 'PRO015');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Grande', 9, 'PRO016');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 3, 'PRO017');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Mediano', 6, 'PRO018');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Grande', 10, 'PRO019');
-INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 4, 'PRO020');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 4, 'PRO001');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Mediano', 6, 'PRO002');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Grande', 8, 'PRO003');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 5, 'PRO004');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Mediano', 7, 'PRO005');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Grande', 9, 'PRO006');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 3, 'PRO007');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Mediano', 6, 'PRO008');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Grande', 10, 'PRO009');
+INSERT INTO PollosDespresados (tamañoDespresado, numeroPiezas, codigo) VALUES ('Pequeño', 4, 'PRO010');
 
 
 -- Insertar en Menudencias
 
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Bajo', 'PRO021');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Corazon', 'Medio', 'PRO022');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Mollejas', 'Alto', 'PRO023');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Medio', 'PRO024');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Corazon', 'Bajo', 'PRO025');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Mollejas', 'Medio', 'PRO026');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Alto', 'PRO027');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Corazon', 'Medio', 'PRO028');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Mollejas', 'Bajo', 'PRO029');
-INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Medio', 'PRO030');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Bajo', 'PRO001');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Corazon', 'Medio', 'PRO002');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Mollejas', 'Alto', 'PRO003');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Medio', 'PRO004');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Corazon', 'Bajo', 'PRO005');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Mollejas', 'Medio', 'PRO006');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Alto', 'PRO007');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Corazon', 'Medio', 'PRO008');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Mollejas', 'Bajo', 'PRO009');
+INSERT INTO Menudencias (parteMenudencia, contenidoSangre, codigo) VALUES ('Higado', 'Medio', 'PRO010');
 
 
 -- Insertar en Clientes
@@ -184,7 +185,6 @@ VALUES ('FAC009', TO_DATE('2024-03-09', 'YYYY-MM-DD'), 'Aprobada', 275.50, 'PED0
 INSERT INTO Facturas (facturaID, fechaEmision, estado, valorUnitario, codigoPedido, codigoDeuda, codigoPago) 
 VALUES ('FAC010', TO_DATE('2024-03-10', 'YYYY-MM-DD'), 'Cancelada', 500.99, 'PED010', 'DEU010', 'PAG010');
 
-
 -- Insertar en Fisicas 
 
 INSERT INTO Fisicas (serial, codigoFactura) VALUES ('AB1001', 'FAC001');
@@ -258,80 +258,77 @@ VALUES ('PAG009', 15.00, 'Con deuda', TO_DATE('2025-03-18', 'YYYY-MM-DD'), '15:2
 INSERT INTO Pagos (pagoID, descuento, estado, fecha, hora, entidadFinanciera, metodoPago) 
 VALUES ('PAG010', 4.50, 'En proceso', TO_DATE('2025-03-19', 'YYYY-MM-DD'), '12:05', 'Banco B', 'Efectivo');
 
-
 -- Insertar en Despachos
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES001', T, T, 'Juan Pérez', TO_DATE('2025-03-10', 'YYYY-MM-DD'), 'Pollos 500kg', 'FAC001', 'ENV001');
+VALUES ('DES001', 'T', 'T', 'Juan Pérez', TO_DATE('2025-03-10', 'YYYY-MM-DD'), 'Pollos 500kg', 'FAC001', 'ENV001');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES002', F, T, 'María Gómez', TO_DATE('2025-03-11', 'YYYY-MM-DD'), 'Menudencias 200g', 'FAC002', 'ENV002');
+VALUES ('DES002', 'F', 'T', 'María Gómez', TO_DATE('2025-03-11', 'YYYY-MM-DD'), 'Menudencias 200g', 'FAC002', 'ENV002');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES003', T, F, 'Carlos López', TO_DATE('2025-03-12', 'YYYY-MM-DD'), 'Pechugas 1kg', 'FAC003', 'ENV003');
+VALUES ('DES003', 'T', 'F', 'Carlos López', TO_DATE('2025-03-12', 'YYYY-MM-DD'), 'Pechugas 1kg', 'FAC003', 'ENV003');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES004', T, T, 'Ana Torres', TO_DATE('2025-03-13', 'YYYY-MM-DD'), 'Alas 300g', 'FAC004', 'ENV004');
+VALUES ('DES004', 'T', 'T', 'Ana Torres', TO_DATE('2025-03-13', 'YYYY-MM-DD'), 'Alas 300g', 'FAC004', 'ENV004');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES005', F, T, 'Pedro Ramírez', TO_DATE('2025-03-14', 'YYYY-MM-DD'), 'Muslos 2kg', 'FAC005', 'ENV005');
+VALUES ('DES005', 'F', 'T', 'Pedro Ramírez', TO_DATE('2025-03-14', 'YYYY-MM-DD'), 'Muslos 2kg', 'FAC005', 'ENV005');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES006', T, T, 'Laura Sánchez', TO_DATE('2025-03-15', 'YYYY-MM-DD'), 'Patas 400g', 'FAC006', 'ENV006');
+VALUES ('DES006', 'T', 'T', 'Laura Sánchez', TO_DATE('2025-03-15', 'YYYY-MM-DD'), 'Patas 400g', 'FAC006', 'ENV006');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES007', F, F, 'Fernando Díaz', TO_DATE('2025-03-16', 'YYYY-MM-DD'), 'Filetes 1.5kg', 'FAC007', 'ENV007');
+VALUES ('DES007', 'F', 'F', 'Fernando Díaz', TO_DATE('2025-03-16', 'YYYY-MM-DD'), 'Filetes 1500g', 'FAC007', 'ENV007');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES008', T, T, 'Gabriela Ruiz', TO_DATE('2025-03-17', 'YYYY-MM-DD'), 'Pollo entero 3kg', 'FAC008', 'ENV008');
+VALUES ('DES008', 'T', 'T', 'Gabriela Ruiz', TO_DATE('2025-03-17', 'YYYY-MM-DD'), 'Pollo entero 3kg', 'FAC008', 'ENV008');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES009', T, F, 'Sergio Mendoza', TO_DATE('2025-03-18', 'YYYY-MM-DD'), 'Molidas 700g', 'FAC009', 'ENV009');
+VALUES ('DES009', 'T', 'F', 'Sergio Mendoza', TO_DATE('2025-03-18', 'YYYY-MM-DD'), 'Molidas 700g', 'FAC009', 'ENV009');
 
 INSERT INTO Despachos (despachoID, disponibilidadCarros, revisionProductos, encargado, fechaEstimada, cantidadEnviada, codigoFactura, guiaEnvio) 
-VALUES ('DES010', F, T, 'Valeria Cortés', TO_DATE('2025-03-19', 'YYYY-MM-DD'), 'Huesos 500g', 'FAC010', 'ENV010');
-
+VALUES ('DES010', 'F', 'T', 'Valeria Cortés', TO_DATE('2025-03-19', 'YYYY-MM-DD'), 'Huesos 500g', 'FAC010', 'ENV010');
 
 -- Insertar en Envios
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV001', 'ABC123', 'Juan Pérez', TO_DATE('2025-03-10', 'YYYY-MM-DD'), '08:30', 'María Gómez', 'Entrega puntual', 'Bogotá', 150.50, F);
+VALUES ('ENV001', 'ABC123', 'Juan Pérez', TO_DATE('2025-03-10', 'YYYY-MM-DD'), '08:30', 'María Gómez', 'Entrega puntual', 'Bogotá', 150.50, 'F');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV002', 'DEF456', 'Carlos López', TO_DATE('2025-03-11', 'YYYY-MM-DD'), '10:15', 'Pedro Ramírez', 'Cliente ausente', 'Medellín', 200.00, T);
+VALUES ('ENV002', 'DEF456', 'Carlos López', TO_DATE('2025-03-11', 'YYYY-MM-DD'), '10:15', 'Pedro Ramírez', 'Cliente ausente', 'Medellín', 200.00, 'T');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV003', 'GHI789', 'Ana Torres', TO_DATE('2025-03-12', 'YYYY-MM-DD'), '14:45', 'Laura Sánchez', NULL, 'Cali', 175.75, F);
+VALUES ('ENV003', 'GHI789', 'Ana Torres', TO_DATE('2025-03-12', 'YYYY-MM-DD'), '14:45', 'Laura Sánchez', NULL, 'Cali', 175.75, 'F');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV004', 'JKL321', 'Sergio Mendoza', TO_DATE('2025-03-13', 'YYYY-MM-DD'), '09:00', 'Fernando Díaz', 'Entrega con retraso', 'Barranquilla', 180.30, F);
+VALUES ('ENV004', 'JKL321', 'Sergio Mendoza', TO_DATE('2025-03-13', 'YYYY-MM-DD'), '09:00', 'Fernando Díaz', 'Entrega con retraso', 'Barranquilla', 180.30, 'F');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV005', 'MNO654', 'Gabriela Ruiz', TO_DATE('2025-03-14', 'YYYY-MM-DD'), '11:20', 'Valeria Cortés', 'Entregado sin novedades', 'Cartagena', 210.80, F);
+VALUES ('ENV005', 'MNO654', 'Gabriela Ruiz', TO_DATE('2025-03-14', 'YYYY-MM-DD'), '11:20', 'Valeria Cortés', 'Entregado sin novedades', 'Cartagena', 210.80, 'F');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV006', 'PQR987', 'Roberto Martínez', TO_DATE('2025-03-15', 'YYYY-MM-DD'), '15:30', 'Andrea Suárez', 'Paquete dañado', 'Pereira', 160.60, T);
+VALUES ('ENV006', 'PQR987', 'Roberto Martínez', TO_DATE('2025-03-15', 'YYYY-MM-DD'), '15:30', 'Andrea Suárez', 'Paquete dañado', 'Pereira', 160.60, 'T');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV007', 'STU159', 'Manuel Herrera', TO_DATE('2025-03-16', 'YYYY-MM-DD'), '07:50', 'Diana Castro', NULL, 'Bucaramanga', 145.00, F);
+VALUES ('ENV007', 'STU159', 'Manuel Herrera', TO_DATE('2025-03-16', 'YYYY-MM-DD'), '07:50', 'Diana Castro', NULL, 'Bucaramanga', 145.00, 'F');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV008', 'VWX753', 'Patricia León', TO_DATE('2025-03-17', 'YYYY-MM-DD'), '13:10', 'Alejandro Ríos', 'Cambio de dirección', 'Manizales', 190.25, T);
+VALUES ('ENV008', 'VWX753', 'Patricia León', TO_DATE('2025-03-17', 'YYYY-MM-DD'), '13:10', 'Alejandro Ríos', 'Cambio de dirección', 'Manizales', 190.25, 'T');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV009', 'YZA852', 'Ricardo Gómez', TO_DATE('2025-03-18', 'YYYY-MM-DD'), '17:00', 'Natalia Torres', 'Cliente satisfecho', 'Cúcuta', 220.40, F);
+VALUES ('ENV009', 'YZA852', 'Ricardo Gómez', TO_DATE('2025-03-18', 'YYYY-MM-DD'), '17:00', 'Natalia Torres', 'Cliente satisfecho', 'Cúcuta', 220.40, 'F');
 
 INSERT INTO Envios (guiaID, placaVehiculo, conductor, fechaEntrega, horaEntrega, destinatario, observaciones, ubicacion, costo, devolucion) 
-VALUES ('ENV010', NULL, 'Lorena Medina', TO_DATE('2025-03-19', 'YYYY-MM-DD'), '16:45', 'Javier Peña', 'Entrega manual sin vehículo', 'Villavicencio', 130.90, F);
-
+VALUES ('ENV010', NULL, 'Lorena Medina', TO_DATE('2025-03-19', 'YYYY-MM-DD'), '16:45', 'Javier Peña', 'Entrega manual sin vehículo', 'Villavicencio', 130.90, 'F');
 
 -- Insertar en Paradas
 
 INSERT INTO Paradas (rutaID, zona, tiempoRecorrido, puntoPartida, puntoLlegada, codigoEnvio) 
-VALUES ('PAR001', 'Zona Norte, Bogotá', '01:30', 'Bodega Principal', 'Punto de distribución 1', 'ENV001');
+VALUES ('PAR001', 'Zona Norte, Bogota', '01:30', 'Bodega Principal', 'Punto de distribución 1', 'ENV001');
 
 INSERT INTO Paradas (rutaID, zona, tiempoRecorrido, puntoPartida, puntoLlegada, codigoEnvio) 
-VALUES ('PAR002', 'Zona Sur, Medellín', '02:15', 'Centro de acopio', 'Tienda Mayorista 3', 'ENV002');
+VALUES ('PAR002', 'Zona Sur, Medellin', '02:15', 'Centro de acopio', 'Tienda Mayorista 3', 'ENV002');
 
 INSERT INTO Paradas (rutaID, zona, tiempoRecorrido, puntoPartida, puntoLlegada, codigoEnvio) 
 VALUES ('PAR003', 'Zona Centro, Cali', '01:50', 'Planta de producción', 'Sucursal Cali', 'ENV003');
@@ -352,7 +349,7 @@ INSERT INTO Paradas (rutaID, zona, tiempoRecorrido, puntoPartida, puntoLlegada, 
 VALUES ('PAR008', 'Zona Universitaria, Manizales', '02:30', 'Almacén General', 'Universidad Pública', 'ENV008');
 
 INSERT INTO Paradas (rutaID, zona, tiempoRecorrido, puntoPartida, puntoLlegada, codigoEnvio) 
-VALUES ('PAR009', 'Zona Empresarial, Cúcuta', '01:35', 'Depósito Norte', 'Tienda Corporativa', 'ENV009');
+VALUES ('PAR009', 'Zona Empresarial, Cucuta', '01:35', 'Depósito Norte', 'Tienda Corporativa', 'ENV009');
 
 INSERT INTO Paradas (rutaID, zona, tiempoRecorrido, puntoPartida, puntoLlegada, codigoEnvio) 
 VALUES ('PAR010', 'Zona Rural, Villavicencio', NULL, 'Almacén Campesino', 'Granja Productora', 'ENV010');
