@@ -51,13 +51,13 @@ CREATE TABLE Clientes(
 
 CREATE TABLE PuntosDeVenta(
     codigoCliente VARCHAR2(10) NOT NULL,
-    encargado VARCHAR2 NOT NULL,
-    zona VARCHAR2 NOT NULL
+    encargado VARCHAR2(30) NOT NULL,
+    zona VARCHAR2(50) NOT NULL
 );
 
 CREATE TABLE Externos(
     codigoCliente VARCHAR2(10) NOT NULL,
-    tipo VARCHAR2 NOT NULL,
+    tipo VARCHAR2(30) NOT NULL,
     correoElectronico VARCHAR2(50)
 );
 
