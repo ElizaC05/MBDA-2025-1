@@ -124,7 +124,7 @@ CREATE TABLE Envios(
     destinatario VARCHAR2(15) NOT NULL, 
     observaciones VARCHAR2(50),
     ubicacion VARCHAR2(25) NOT NULL,
-    costo NUMBER (4,2) NOT NULL,
+    costo NUMBER (10,2) NOT NULL,
     devolucion CHAR(1)
 );
 
