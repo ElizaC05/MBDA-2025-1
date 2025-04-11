@@ -91,7 +91,7 @@ CREATE TABLE Deudas(
     deudaID VARCHAR2(10) NOT NULL,
     plazo NUMBER(3) NOT NULL,
     fechaVencimiento DATE NOT NULL,
-    abono NUMBER (4,2) NOT NULL
+    abono NUMBER (10,2) NOT NULL
 );
 
 CREATE TABLE Pagos(
