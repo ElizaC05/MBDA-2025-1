@@ -142,7 +142,7 @@ ALTER TABLE Despachos ADD CONSTRAINT CK_DESPACHOS_REVISION
     CHECK (revisionProductos IN ('T', 'F'));
 
 ALTER TABLE Envios ADD CONSTRAINT CK_PLACA_ENVIOS
-    CHECK (placaVehiculo LIKE '[A-Z][A-Z][A-Z][0-9][0-9][0-9]');
+CHECK (REGEXP_LIKE(placaVehiculo, '^[A-Z]{3}[0-9]{3}$'));
 
 ALTER TABLE Envios ADD CONSTRAINT CK_ENVIOS_ID
     CHECK (REGEXP_LIKE(guiaID, '^ENV[0-9]+$'));
