@@ -101,7 +101,7 @@ CREATE TABLE Pagos(
     fecha DATE NOT NULL,
     hora VARCHAR2(10) NOT NULL,
     entidadFinanciera VARCHAR2(15) NOT NULL,
-    metodoPago VARCHAR2(10) NOT NULL
+    metodoPago VARCHAR2(20) NOT NULL
 );
 
 CREATE TABLE Despachos(
