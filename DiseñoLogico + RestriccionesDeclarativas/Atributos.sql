@@ -157,7 +157,7 @@ ALTER TABLE Paradas ADD CONSTRAINT CK_PARADAS_ID
     CHECK (REGEXP_LIKE(rutaID, '^PAR[0-9]+$'));
 
 ALTER TABLE Paradas ADD CONSTRAINT CK_PARADAS_ZONA
-    CHECK (REGEXP_LIKE(zona, '^[A-Za-z0-9#.,\- ]+$') AND LENGTH(zona) <= 60);
+    CHECK (REGEXP_LIKE(zona, '^[A-Za-z0-9#., \-]+$') AND LENGTH(zona) <= 60);
 
 ALTER TABLE Paradas ADD CONSTRAINT CK_PARADAS_TIEMPO
     CHECK (REGEXP_LIKE(tiempoRecorrido, '^([01][0-9]|2[0-3]):[0-5][0-9]$'));
