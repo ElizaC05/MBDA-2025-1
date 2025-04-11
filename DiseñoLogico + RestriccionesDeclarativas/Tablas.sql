@@ -130,7 +130,7 @@ CREATE TABLE Envios(
 
 CREATE TABLE Paradas(
     rutaID VARCHAR2(10) NOT NULL,
-    zona VARCHAR2(25) NOT NULL,
+    zona VARCHAR2(50) NOT NULL,
     tiempoRecorrido VARCHAR2(10),
     puntoPartida VARCHAR2(50) NOT NULL,
     puntoLlegada VARCHAR2(50) NOT NULL,
