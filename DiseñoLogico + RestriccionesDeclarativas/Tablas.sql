@@ -112,11 +112,11 @@ CREATE TABLE Despachos(
     fechaEstimada DATE NOT NULL,
     cantidadEnviada VARCHAR2(100) NOT NULL, 
     codigoFactura  VARCHAR2(10) NOT NULL,
-    guiaEnvio VARCHAR2(10) NOT NULL
 );
 
 CREATE TABLE Envios(
-    guiaID VARCHAR2(10) NOT NULL, 
+    guiaID VARCHAR2(10) NOT NULL,
+    idDespacho VARCHAR2(10) NOT NULL,
     placaVehiculo VARCHAR2(6),
     conductor VARCHAR2(30) NOT NULL,
     fechaEntrega DATE NOT NULL,
